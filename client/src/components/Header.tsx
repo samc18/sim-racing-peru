@@ -22,7 +22,7 @@ const Logo = styled.img`
 
 const Account = styled.span`
     font-size: ${fontSizes[300]};
-    color: ${colors.font};
+    color: ${colors.text};
 `
 
 const Header = () => {

@@ -1,7 +1,7 @@
 export const colors: any = {
     accent: '#dc070d',
     background: '#201e1e',
-    font: '#fff',
+    text: '#fff',
 }
 
 export const fonts: any = {
