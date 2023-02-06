@@ -13,7 +13,7 @@ const MenuItems = () => {
             <Item text='Competiciones' bgUrl='../../public/images/home/events.jpg' />
             <Item text='Herramientas' bgUrl='../../public/images/home/tools.png' />
             <Item text='Pilotos' bgUrl='../../public/images/home/drivers.png' />
-            <Item text='Equipos' bgUrl='../../public/images/home/teams.png' />
+            <Item text='Equipos' bgUrl='../../public/images/home/teams.jpg' />
             <Item text='Pits' bgUrl='../../public/images/home/pits.jpg' />
         </StyledMenuItems>
     )
