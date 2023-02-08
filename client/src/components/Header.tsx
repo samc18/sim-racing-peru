@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import {
     colors,
     margins,
-    fontSizes
+    fontSizes,
+    breakPoints,
 } from '../styles/stylesVariables'
 
 const StyledHeader = styled.header`
@@ -12,7 +13,7 @@ const StyledHeader = styled.header`
     padding-inline: ${margins.mobile};
     background-color: ${colors.background};
 
-    @media (min-width: 768px) {
+    @media (min-width: ${breakPoints.tablet}) {
         padding-inline: ${margins.desktop};
     }
 `
@@ -22,12 +23,12 @@ const Logo = styled.img`
 
 const Account = styled.span`
     font-size: ${fontSizes[300]};
-    color: ${colors.font};
+    color: ${colors.text};
 `
 
-const Header = () => {
+const Header = ({ className }: { className?: string }) => {
     return (
-        <StyledHeader>
+        <StyledHeader className={className}>
             <Logo src="/images/srp/srp_white.png" alt="Sim Racing Peru logo" />
             <Account>Mi Cuenta</Account>
         </StyledHeader>
