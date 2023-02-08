@@ -1,5 +1,9 @@
 import styled from 'styled-components'
-import { colors, margins, breakPoints } from '../styles/stylesVariables'
+import {
+    colors,
+    margins,
+    breakPoints,
+} from '../styles/stylesVariables'
 
 const StyledLastRace = styled.div`
     padding: 3em 0;

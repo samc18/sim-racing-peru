@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { colors } from '../styles/stylesVariables'
 import MenuItems from '../components/MenuItems'
 import LastRace from '../components/LastRace'
+import Sponsors from '../components/Sponsors'
 
 const StyledHome = styled.div`
     background-image: url(/images/home/background.jpg);
@@ -14,6 +15,7 @@ const Home = () => {
         <StyledHome>
             <MenuItems />
             <LastRace />
+            <Sponsors />
         </StyledHome>
     )
 }
