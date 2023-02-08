@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import Item from './Item'
-import { margins } from '../styles/stylesVariables'
+import {
+    margins,
+    breakPoints,
+} from '../styles/stylesVariables'
 
 const StyledItem = styled(Item)``
 
@@ -9,7 +12,7 @@ const StyledMenuItems = styled.div`
     display: grid;
     gap: 3em;
 
-    @media (min-width: 850px) {
+    @media (min-width: ${breakPoints.tablet}) {
         grid-template-areas:
             "competiciones competiciones"
             "pilotos equipos"
@@ -33,7 +36,7 @@ const StyledMenuItems = styled.div`
         padding-inline: ${margins.desktop};
     }
 
-    @media (min-width: 1260px) {
+    @media (min-width: ${breakPoints.desktop}) {
         grid-template-areas:
             "competiciones competiciones herramientas"
             "pilotos equipos pits";

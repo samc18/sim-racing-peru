@@ -17,3 +17,8 @@ export const margins: any = {
 export const fontSizes: any = {
     300: '1.5rem',
 }
+
+export const breakPoints: any = {
+    tablet: '850px',
+    desktop: '1260px',
+}

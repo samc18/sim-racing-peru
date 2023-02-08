@@ -1,5 +1,9 @@
 import styled from 'styled-components'
-import { colors, fontSizes } from '../styles/stylesVariables'
+import {
+    colors,
+    fontSizes,
+    breakPoints,
+} from '../styles/stylesVariables'
 
 const StyledItem = styled.div<StyledItemProps>`
     width: 375px;
@@ -13,7 +17,7 @@ const StyledItem = styled.div<StyledItemProps>`
     background-position: center;
     background-blend-mode: multiply;
 
-    @media (min-width: 850px) {
+    @media (min-width: ${breakPoints.tablet}) {
         width: ${({ text }) => text === "Competiciones" ? "720px" : "375px"};
     }
 `
@@ -23,7 +27,7 @@ const Text = styled.p<StyledTextProps>`
     color: ${colors.text};
     font-size: ${fontSizes[300]};
 
-    @media (min-width: 850px) {
+    @media (min-width: ${breakPoints.tablet}) {
         padding-left: ${({ text }) => text === "Competiciones" ? "5em" : "3em"}};
     }
 `

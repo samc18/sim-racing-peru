@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import {
     colors,
     margins,
-    fontSizes
+    fontSizes,
+    breakPoints,
 } from '../styles/stylesVariables'
 
 const StyledHeader = styled.header`
@@ -12,7 +13,7 @@ const StyledHeader = styled.header`
     padding-inline: ${margins.mobile};
     background-color: ${colors.background};
 
-    @media (min-width: 850px) {
+    @media (min-width: ${breakPoints.tablet}) {
         padding-inline: ${margins.desktop};
     }
 `
