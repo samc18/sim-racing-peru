@@ -1,20 +1,69 @@
 import styled from 'styled-components'
 import Item from './Item'
+import { margins } from '../styles/stylesVariables'
+
+const StyledItem = styled(Item)``
 
 const StyledMenuItems = styled.div`
     padding: 3em 0;
     display: grid;
     gap: 3em;
+
+    @media (min-width: 850px) {
+        grid-template-areas:
+            "competiciones competiciones"
+            "pilotos equipos"
+            "herramientas pits";
+        ${StyledItem}:nth-child(1) {
+            grid-area: competiciones;
+        }
+        ${StyledItem}:nth-child(2) {
+            grid-area: herramientas;
+        }
+        ${StyledItem}:nth-child(3) {
+            grid-area: pilotos;
+        }
+        ${StyledItem}:nth-child(4) {
+            grid-area: equipos;
+        }
+        ${StyledItem}:nth-child(5) {
+            grid-area: pits;
+        }
+        gap: 1em;
+        padding-inline: ${margins.desktop};
+    }
+
+    @media (min-width: 1260px) {
+        grid-template-areas:
+            "competiciones competiciones herramientas"
+            "pilotos equipos pits";
+        ${StyledItem}:nth-child(1) {
+            grid-area: competiciones;
+        }
+        ${StyledItem}:nth-child(2) {
+            grid-area: herramientas;
+        }
+        ${StyledItem}:nth-child(3) {
+            grid-area: pilotos;
+        }
+        ${StyledItem}:nth-child(4) {
+            grid-area: equipos;
+        }
+        ${StyledItem}:nth-child(5) {
+            grid-area: pits;
+        }
+        gap: 1em;
+        padding-inline: ${margins.desktop};
 `
 
-const MenuItems = () => {
+const MenuItems = ({ className }: { className?: string }) => {
     return (
-        <StyledMenuItems>
-            <Item text='Competiciones' bgUrl='../../public/images/home/events.jpg' />
-            <Item text='Herramientas' bgUrl='../../public/images/home/tools.png' />
-            <Item text='Pilotos' bgUrl='../../public/images/home/drivers.png' />
-            <Item text='Equipos' bgUrl='../../public/images/home/teams.jpg' />
-            <Item text='Pits' bgUrl='../../public/images/home/pits.jpg' />
+        <StyledMenuItems className={className}>
+            <StyledItem text='Competiciones' bgUrl='/images/home/events.jpg' />
+            <StyledItem text='Herramientas' bgUrl='/images/home/tools.png' />
+            <StyledItem text='Pilotos' bgUrl='/images/home/drivers.png' />
+            <StyledItem text='Equipos' bgUrl='/images/home/teams.jpg' />
+            <StyledItem text='Pits' bgUrl='/images/home/pits.jpg' />
         </StyledMenuItems>
     )
 }

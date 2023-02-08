@@ -13,7 +13,7 @@ const StyledItem = styled.div<StyledItemProps>`
     background-position: center;
     background-blend-mode: multiply;
 
-    @media (min-width: 768px) {
+    @media (min-width: 850px) {
         width: ${({ text }) => text === "Competiciones" ? "720px" : "375px"};
     }
 `
@@ -23,7 +23,7 @@ const Text = styled.p<StyledTextProps>`
     color: ${colors.text};
     font-size: ${fontSizes[300]};
 
-    @media (min-width: 768px) {
+    @media (min-width: 850px) {
         padding-left: ${({ text }) => text === "Competiciones" ? "5em" : "3em"}};
     }
 `
@@ -31,6 +31,7 @@ const Text = styled.p<StyledTextProps>`
 interface ItemProps {
     text: string;
     bgUrl: string;
+    className?: string;
 }
 
 interface StyledItemProps {
@@ -42,9 +43,9 @@ interface StyledTextProps {
     text: string;
 }
 
-const Item = ({ text, bgUrl }: ItemProps) => {
+const Item = ({ text, bgUrl, className }: ItemProps) => {
     return (
-        <StyledItem text={text} bgUrl={bgUrl}>
+        <StyledItem text={text} bgUrl={bgUrl} className={className}>
             <Text text={text}>{ text }</Text>
         </StyledItem>
     )

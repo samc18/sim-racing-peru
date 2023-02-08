@@ -3,7 +3,7 @@ import { colors } from '../styles/stylesVariables'
 import MenuItems from '../components/MenuItems'
 
 const StyledHome = styled.div`
-    background-image: url(../../public/images/home/background.jpg);
+    background-image: url(/images/home/background.jpg);
     background-color: ${colors.background};
     background-blend-mode: multiply;
 `
