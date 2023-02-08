@@ -36,6 +36,10 @@ const GlobalStyle = createGlobalStyle`
         src: url('/fonts/dameron-bold.ttf');
         font-family: 'Dameron Bold';
     }
+
+    a {
+        text-decoration: none;
+    }
 `
 
 export default GlobalStyle
