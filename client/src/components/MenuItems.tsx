@@ -53,11 +53,11 @@ const StyledMenuItems = styled.div`
 const MenuItems = ({ className }: { className?: string }) => {
     return (
         <StyledMenuItems className={className}>
-            <StyledItem text='Competiciones' bgUrl='/images/home/events.jpg' />
-            <StyledItem text='Herramientas' bgUrl='/images/home/tools.png' />
-            <StyledItem text='Pilotos' bgUrl='/images/home/drivers.png' />
-            <StyledItem text='Equipos' bgUrl='/images/home/teams.jpg' />
-            <StyledItem text='Pits' bgUrl='/images/home/pits.jpg' />
+            <StyledItem text='Competiciones' bgUrl='/images/home/events.jpg' page='events' />
+            <StyledItem text='Herramientas' bgUrl='/images/home/tools.png' page='tools' />
+            <StyledItem text='Pilotos' bgUrl='/images/home/drivers.png' page='drivers' />
+            <StyledItem text='Equipos' bgUrl='/images/home/teams.jpg' page='teams' />
+            <StyledItem text='Pits' bgUrl='/images/home/pits.jpg' page='pits' />
         </StyledMenuItems>
     )
 }

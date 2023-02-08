@@ -4,6 +4,7 @@ import {
     fontSizes,
     breakPoints,
 } from '../styles/stylesVariables'
+import { Link } from 'react-router-dom'
 
 const StyledItem = styled.div<StyledItemProps>`
     width: 375px;
@@ -36,6 +37,7 @@ interface ItemProps {
     text: string;
     bgUrl: string;
     className?: string;
+    page: string;
 }
 
 interface StyledItemProps {
@@ -47,10 +49,12 @@ interface StyledTextProps {
     text: string;
 }
 
-const Item = ({ text, bgUrl, className }: ItemProps) => {
+const Item = ({ text, bgUrl, className, page }: ItemProps) => {
     return (
         <StyledItem text={text} bgUrl={bgUrl} className={className}>
-            <Text text={text}>{ text }</Text>
+            <Link to={page}>
+                <Text text={text}>{ text }</Text>
+            </Link>
         </StyledItem>
     )
 }

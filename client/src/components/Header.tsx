@@ -5,6 +5,7 @@ import {
     fontSizes,
     breakPoints,
 } from '../styles/stylesVariables'
+import { Link } from 'react-router-dom'
 
 const StyledHeader = styled.header`
     display: flex;
@@ -29,8 +30,12 @@ const Account = styled.span`
 const Header = ({ className }: { className?: string }) => {
     return (
         <StyledHeader className={className}>
-            <Logo src="/images/srp/srp_white.png" alt="Sim Racing Peru logo" />
-            <Account>Mi Cuenta</Account>
+            <Link to='/'>
+                <Logo src="/images/srp/srp_white.png" alt="Sim Racing Peru logo" />
+            </Link>
+            <Link to='account'>
+                <Account>Mi Cuenta</Account>
+            </Link>
         </StyledHeader>
     )
 }
