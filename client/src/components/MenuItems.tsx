@@ -10,6 +10,7 @@ const StyledItem = styled(Item)``
 const StyledMenuItems = styled.div`
     padding: 3em 0;
     display: grid;
+    justify-items: center;
     gap: 3em;
     grid-template-areas:
         'competiciones'

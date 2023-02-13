@@ -6,10 +6,9 @@ import {
 } from '../styles/stylesVariables'
 import { Link } from 'react-router-dom'
 
-const StyledItem = styled.div<StyledItemProps>`
+const Container = styled.div<ContainerProps>`
     width: 375px;
     height: 300px;
-    margin-inline: auto;
     clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
     background-image: url(${({ bgUrl }) => bgUrl});
     background-color: gray;
@@ -23,7 +22,7 @@ const StyledItem = styled.div<StyledItemProps>`
     }
 `
 
-const Text = styled.p<StyledTextProps>`
+const Text = styled.p<TextProps>`
     padding-left: 3em;
     color: ${colors.text};
     font-size: ${fontSizes[300]};
@@ -40,22 +39,26 @@ interface ItemProps {
     page: string;
 }
 
-interface StyledItemProps {
+interface ContainerProps {
     text: string;
     bgUrl: string;
 }
 
-interface StyledTextProps {
+interface TextProps {
     text: string;
+}
+
+const linkStyles = {
+    clipPath: 'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)',
 }
 
 const Item = ({ text, bgUrl, className, page }: ItemProps) => {
     return (
-        <StyledItem text={text} bgUrl={bgUrl} className={className}>
-            <Link to={page}>
-                <Text text={text}>{ text }</Text>
-            </Link>
-        </StyledItem>
+        <Link to={page} className={className} style={linkStyles}>
+            <Container text={text} bgUrl={bgUrl}>
+                    <Text text={text}>{ text }</Text>
+            </Container>
+        </Link>
     )
 }
 
