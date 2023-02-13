@@ -19,7 +19,7 @@ const StyledItem = styled.div<StyledItemProps>`
     background-blend-mode: multiply;
 
     @media (min-width: ${breakPoints.tablet}) {
-        width: ${({ text }) => text === "Competiciones" ? "720px" : "375px"};
+        width: ${({ text }) => text === 'Competiciones' ? '720px' : '375px'};
     }
 `
 
@@ -29,7 +29,7 @@ const Text = styled.p<StyledTextProps>`
     font-size: ${fontSizes[300]};
 
     @media (min-width: ${breakPoints.tablet}) {
-        padding-left: ${({ text }) => text === "Competiciones" ? "5em" : "3em"}};
+        padding-left: ${({ text }) => text === 'Competiciones' ? '5em' : '3em'}};
     }
 `
 

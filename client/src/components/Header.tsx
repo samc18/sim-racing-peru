@@ -31,7 +31,7 @@ const Header = ({ className }: { className?: string }) => {
     return (
         <StyledHeader className={className}>
             <Link to='/'>
-                <Logo src="/images/srp/srp_white.png" alt="Sim Racing Peru logo" />
+                <Logo src='/images/srp/srp_white.png' alt='Sim Racing Peru logo' />
             </Link>
             <Link to='account'>
                 <Account>Mi Cuenta</Account>
