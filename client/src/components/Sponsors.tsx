@@ -18,7 +18,7 @@ const StyledTitle = styled.h1`
 `
 
 const StyledImg = styled.img`
-    width: 200px;
+    width: 180px;
     margin-inline: auto;
 `
 
@@ -55,7 +55,7 @@ const StyledImgContainer = styled.div`
             'intel intel'
             'simula legion'
             'autotvperu autoexpress';
-        gap: 3em;
+        gap: 3em 9em;
     }
 
     @media (min-width: ${breakPoints.desktop}) {
