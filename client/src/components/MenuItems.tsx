@@ -48,8 +48,6 @@ const StyledMenuItems = styled.div`
         grid-template-areas:
             'competiciones competiciones herramientas'
             'pilotos equipos pits';
-        gap: 1em 0;
-        justify-content: center;
         padding-inline: ${margins.desktop};
 `
 
