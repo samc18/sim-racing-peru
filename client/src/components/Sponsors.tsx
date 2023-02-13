@@ -18,7 +18,7 @@ const StyledTitle = styled.h1`
 `
 
 const StyledImg = styled.img`
-    width: 200px;
+    width: 180px;
     margin-inline: auto;
 `
 
@@ -29,11 +29,11 @@ const StyledImgContainer = styled.div`
     align-items: center;
     gap: 2em;
     grid-template-areas:
-        "simula"
-        "intel"
-        "legion"
-        "autotvperu"
-        "autoexpress";
+        'simula'
+        'intel'
+        'legion'
+        'autotvperu'
+        'autoexpress';
     ${StyledImg}:nth-child(1) {
         grid-area: simula;
     }
@@ -52,15 +52,15 @@ const StyledImgContainer = styled.div`
 
     @media (min-width: ${breakPoints.tablet}) {
         grid-template-areas: 
-            "intel intel"
-            "simula legion"
-            "autotvperu autoexpress";
-        gap: 3em;
+            'intel intel'
+            'simula legion'
+            'autotvperu autoexpress';
+        gap: 3em 9em;
     }
 
     @media (min-width: ${breakPoints.desktop}) {
         grid-template-areas:
-            "autotvperu simula intel legion autoexpress";
+            'autotvperu simula intel legion autoexpress';
         gap: 3em;
 `
 
@@ -69,11 +69,11 @@ const Sponsors = ({ className }: { className?: string }) => {
         <StyledSponsors>
             <StyledTitle>Auspiciadores</StyledTitle>
             <StyledImgContainer>
-                <StyledImg src="/images/sponsors/simula.png" alt="" />
-                <StyledImg src="/images/sponsors/intel.png" alt="" />
-                <StyledImg src="/images/sponsors/legion.png" alt="" />
-                <StyledImg src="/images/sponsors/autotvperu.png" alt="" />
-                <StyledImg src="/images/sponsors/autoexpress_2.png" alt="" />
+                <StyledImg src='/images/sponsors/simula.png' alt='' />
+                <StyledImg src='/images/sponsors/intel.png' alt='' />
+                <StyledImg src='/images/sponsors/legion.png' alt='' />
+                <StyledImg src='/images/sponsors/autotvperu.png' alt='' />
+                <StyledImg src='/images/sponsors/autoexpress_2.png' alt='' />
             </StyledImgContainer>
         </StyledSponsors>
     )

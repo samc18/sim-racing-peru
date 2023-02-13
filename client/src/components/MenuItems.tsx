@@ -10,13 +10,14 @@ const StyledItem = styled(Item)``
 const StyledMenuItems = styled.div`
     padding: 3em 0;
     display: grid;
+    justify-items: center;
     gap: 3em;
     grid-template-areas:
-        "competiciones"
-        "pilotos"
-        "equipos"
-        "herramientas"
-        "pits";
+        'competiciones'
+        'pilotos'
+        'equipos'
+        'herramientas'
+        'pits';
     ${StyledItem}:nth-child(1) {
         grid-area: competiciones;
     }
@@ -35,18 +36,18 @@ const StyledMenuItems = styled.div`
 
     @media (min-width: ${breakPoints.tablet}) {
         grid-template-areas:
-            "competiciones competiciones"
-            "pilotos equipos"
-            "herramientas pits";
-        gap: 1em;
+            'competiciones competiciones'
+            'pilotos equipos'
+            'herramientas pits';
+        gap: 1em 0;
+        justify-content: center;
         padding-inline: ${margins.desktop};
     }
 
     @media (min-width: ${breakPoints.desktop}) {
         grid-template-areas:
-            "competiciones competiciones herramientas"
-            "pilotos equipos pits";
-        gap: 1em;
+            'competiciones competiciones herramientas'
+            'pilotos equipos pits';
         padding-inline: ${margins.desktop};
 `
 

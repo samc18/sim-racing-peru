@@ -39,10 +39,10 @@ const LastRace = ({ className }: { className?: string }) => {
         <StyledLastRace>
             <StyledTitle>Último Evento</StyledTitle>
             <StylediFrame
-                src="https://www.youtube.com/embed/MBFP6ecnQv4"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                src='https://www.youtube.com/embed/MBFP6ecnQv4'
+                title='YouTube video player'
+                frameBorder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                 allowFullScreen
             >
             </StylediFrame>
