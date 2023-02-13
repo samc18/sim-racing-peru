@@ -12,6 +12,7 @@ const StyledLastRace = styled.div`
 const StyledTitle = styled.h1`
     color: ${colors.text};
     margin-left: ${margins.mobile};
+    margin-bottom: 2em;
     @media (min-width: ${breakPoints.tablet}) {
         margin-left: ${margins.desktop};
     }
@@ -21,7 +22,6 @@ const StylediFrame = styled.iframe`
     display: block;
     width: 350px;
     height: 315px;
-    margin-top: 3em;
     margin-inline: auto;
 
     @media (min-width: ${breakPoints.tablet}) {

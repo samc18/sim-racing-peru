@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '../styles/stylesVariables'
 import MenuItems from '../components/MenuItems'
+import Socials from '../components/Socials'
 import LastRace from '../components/LastRace'
 import Sponsors from '../components/Sponsors'
 
@@ -14,6 +15,7 @@ const Home = () => {
     return (
         <StyledHome>
             <MenuItems />
+            <Socials />
             <LastRace />
             <Sponsors />
         </StyledHome>

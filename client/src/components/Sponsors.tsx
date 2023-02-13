@@ -12,6 +12,7 @@ const StyledSponsors = styled.div`
 const StyledTitle = styled.h1`
     color: ${colors.text};
     margin-left: ${margins.mobile};
+    margin-bottom: 2em;
     @media (min-width: ${breakPoints.tablet}) {
         margin-left: ${margins.desktop};
     }
@@ -23,7 +24,6 @@ const StyledImg = styled.img`
 `
 
 const StyledImgContainer = styled.div`
-    marin-top: 3em; 
     display: grid;
     justify-content: center;
     align-items: center;

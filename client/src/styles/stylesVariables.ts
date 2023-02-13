@@ -2,6 +2,7 @@ export const colors: any = {
     accent: '#dc070d',
     background: '#201e1e',
     text: '#fff',
+    icon: '#c5c5c5',
 }
 
 export const fonts: any = {

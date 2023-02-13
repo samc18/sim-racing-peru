@@ -48,7 +48,6 @@ const StyledMenuItems = styled.div`
         grid-template-areas:
             'competiciones competiciones herramientas'
             'pilotos equipos pits';
-        padding-inline: ${margins.desktop};
 `
 
 const MenuItems = ({ className }: { className?: string }) => {

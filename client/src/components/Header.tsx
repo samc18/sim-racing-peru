@@ -11,20 +11,25 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: ${margins.mobile};
     background-color: ${colors.background};
-
-    @media (min-width: ${breakPoints.tablet}) {
-        padding-inline: ${margins.desktop};
-    }
 `
 const Logo = styled.img`
     width: 220px;
+    margin-left :${margins.mobile};
+
+    @media (min-width: ${breakPoints.tablet}) {
+        margin-left: ${margins.desktop};
+    }
 `
 
 const Account = styled.span`
     font-size: ${fontSizes[300]};
     color: ${colors.text};
+    margin-right: ${margins.mobile};
+
+    @media (min-width: ${breakPoints.tablet}) {
+        margin-right: ${margins.desktop};
+    }
 `
 
 const Header = ({ className }: { className?: string }) => {
