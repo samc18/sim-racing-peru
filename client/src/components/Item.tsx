@@ -6,6 +6,14 @@ import {
 } from '../styles/stylesVariables'
 import { Link } from 'react-router-dom'
 
+const StyledLink = styled(Link)`
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+        transition: all 0.4s;
+    }
+`
+
 const Container = styled.div<ContainerProps>`
     width: 375px;
     height: 300px;
@@ -54,11 +62,11 @@ const linkStyles = {
 
 const Item = ({ text, bgUrl, className, page }: ItemProps) => {
     return (
-        <Link to={page} className={className} style={linkStyles}>
+        <StyledLink to={page} className={className} style={linkStyles}>
             <Container text={text} bgUrl={bgUrl}>
                     <Text text={text}>{ text }</Text>
             </Container>
-        </Link>
+        </StyledLink>
     )
 }
 
