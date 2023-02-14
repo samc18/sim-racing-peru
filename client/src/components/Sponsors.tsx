@@ -9,7 +9,7 @@ const StyledSponsors = styled.div`
     padding: 3em 0;
 `
 
-const StyledTitle = styled.h1`
+const Title = styled.h1`
     color: ${colors.text};
     margin-left: ${margins.mobile};
     margin-bottom: 2em;
@@ -18,12 +18,12 @@ const StyledTitle = styled.h1`
     }
 `
 
-const StyledImg = styled.img`
+const Logo = styled.img`
     width: 180px;
     margin-inline: auto;
 `
 
-const StyledImgContainer = styled.div`
+const Container = styled.div`
     display: grid;
     justify-content: center;
     align-items: center;
@@ -34,19 +34,19 @@ const StyledImgContainer = styled.div`
         'legion'
         'autotvperu'
         'autoexpress';
-    ${StyledImg}:nth-child(1) {
+    ${Logo}:nth-child(1) {
         grid-area: simula;
     }
-    ${StyledImg}:nth-child(2) {
+    ${Logo}:nth-child(2) {
         grid-area: intel;
     }
-    ${StyledImg}:nth-child(3) {
+    ${Logo}:nth-child(3) {
         grid-area: legion;
     }
-    ${StyledImg}:nth-child(4) {
+    ${Logo}:nth-child(4) {
         grid-area: autotvperu;
     }
-    ${StyledImg}:nth-child(5) {
+    ${Logo}:nth-child(5) {
         grid-area: autoexpress;
     }
 
@@ -67,14 +67,14 @@ const StyledImgContainer = styled.div`
 const Sponsors = ({ className }: { className?: string }) => {
     return (
         <StyledSponsors>
-            <StyledTitle>Auspiciadores</StyledTitle>
-            <StyledImgContainer>
-                <StyledImg src='/images/sponsors/simula.png' alt='' />
-                <StyledImg src='/images/sponsors/intel.png' alt='' />
-                <StyledImg src='/images/sponsors/legion.png' alt='' />
-                <StyledImg src='/images/sponsors/autotvperu.png' alt='' />
-                <StyledImg src='/images/sponsors/autoexpress_2.png' alt='' />
-            </StyledImgContainer>
+            <Title>Auspiciadores</Title>
+            <Container>
+                <Logo src='/images/sponsors/simula.png' alt='' />
+                <Logo src='/images/sponsors/intel.png' alt='' />
+                <Logo src='/images/sponsors/legion.png' alt='' />
+                <Logo src='/images/sponsors/autotvperu.png' alt='' />
+                <Logo src='/images/sponsors/autoexpress_2.png' alt='' />
+            </Container>
         </StyledSponsors>
     )
 }

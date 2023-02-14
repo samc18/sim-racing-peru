@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { colors } from '../styles/stylesVariables'
 import MenuItems from '../components/MenuItems'
 import Socials from '../components/Socials'
-import LastRace from '../components/LastRace'
+import LastEvents from '../components/LastEvents'
 import Sponsors from '../components/Sponsors'
 
 const StyledHome = styled.div`
@@ -16,7 +16,7 @@ const Home = () => {
         <StyledHome>
             <MenuItems />
             <Socials />
-            <LastRace />
+            <LastEvents />
             <Sponsors />
         </StyledHome>
     )

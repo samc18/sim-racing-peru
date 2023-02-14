@@ -7,6 +7,8 @@ import {
 import { Link } from 'react-router-dom'
 
 const StyledLink = styled(Link)`
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+
     &:hover,
     &:focus {
         transform: scale(1.1);
@@ -56,13 +58,9 @@ interface TextProps {
     text: string;
 }
 
-const linkStyles = {
-    clipPath: 'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)',
-}
-
 const Item = ({ text, bgUrl, className, page }: ItemProps) => {
     return (
-        <StyledLink to={page} className={className} style={linkStyles}>
+        <StyledLink to={page} className={className}>
             <Container text={text} bgUrl={bgUrl}>
                     <Text text={text}>{ text }</Text>
             </Container>

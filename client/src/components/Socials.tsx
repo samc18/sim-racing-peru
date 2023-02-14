@@ -25,7 +25,7 @@ const StyledSocials = styled.div`
 `
 const Socials = ({ className }: { className?: string }) => {
     return (
-        <StyledSocials>
+        <StyledSocials className={className}>
             <a href='http://www.instagram.com/simracingperu_' target='_blank'>
                 <FaInstagramSquare className='icon' />
             </a>
