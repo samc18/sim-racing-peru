@@ -6,13 +6,19 @@ import {
 } from '../styles/stylesVariables'
 import { Link } from 'react-router-dom'
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(Link)<StyledLinkProps>`
     clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
 
     &:hover,
     &:focus {
         transform: scale(1.1);
         transition: all 0.4s;
+    }
+
+    @media (min-width: ${breakPoints.tablet}) {
+        clip-path: ${({ text }) => text === 'Competiciones' ?
+            'polygon(7.5% 0%, 100% 0, 92.5% 100%, 0% 100%)' :
+            'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)'};
     }
 `
 
@@ -28,18 +34,17 @@ const Container = styled.div<ContainerProps>`
     background-blend-mode: multiply;
 
     @media (min-width: ${breakPoints.tablet}) {
-        width: ${({ text }) => text === 'Competiciones' ? '720px' : '375px'};
+        width: ${({ text }) => text === 'Competiciones' ? '750px' : '375px'};
+        clip-path: ${({ text }) => text === 'Competiciones' ?
+            'polygon(7.5% 0%, 100% 0, 92.5% 100%, 0% 100%)' :
+            'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)'};
     }
 `
 
-const Text = styled.p<TextProps>`
+const Text = styled.p`
     padding-left: 3em;
     color: ${colors.text};
     font-size: ${fontSizes[300]};
-
-    @media (min-width: ${breakPoints.tablet}) {
-        padding-left: ${({ text }) => text === 'Competiciones' ? '5em' : '3em'}};
-    }
 `
 
 interface ItemProps {
@@ -49,20 +54,20 @@ interface ItemProps {
     page: string;
 }
 
+interface StyledLinkProps {
+    text: string;
+}
+
 interface ContainerProps {
     text: string;
     bgUrl: string;
 }
 
-interface TextProps {
-    text: string;
-}
-
 const Item = ({ text, bgUrl, className, page }: ItemProps) => {
     return (
-        <StyledLink to={page} className={className}>
+        <StyledLink to={page} className={className} text={text}>
             <Container text={text} bgUrl={bgUrl}>
-                    <Text text={text}>{ text }</Text>
+                    <Text>{ text }</Text>
             </Container>
         </StyledLink>
     )
