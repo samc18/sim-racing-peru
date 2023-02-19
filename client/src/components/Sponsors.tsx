@@ -17,6 +17,10 @@ const Title = styled.h1`
 const Logo = styled.img`
     width: 180px;
     margin-inline: auto;
+
+    @media (min-width: ${breakPoints.desktop}) {
+        width: 11vw;
+    }
 `
 
 const Container = styled.div`
