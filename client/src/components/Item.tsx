@@ -23,8 +23,8 @@ const StyledLink = styled(Link)<StyledLinkProps>`
 `
 
 const Container = styled.div<ContainerProps>`
-    width: 375px;
-    height: 300px;
+    width: 330px;
+    height: 330px;
     clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
     background-image: url(${({ bgUrl }) => bgUrl});
     background-color: gray;
@@ -34,10 +34,15 @@ const Container = styled.div<ContainerProps>`
     background-blend-mode: multiply;
 
     @media (min-width: ${breakPoints.tablet}) {
-        width: ${({ text }) => text === 'Competiciones' ? '750px' : '375px'};
+        width: ${({ text }) => text === 'Competiciones' ? '660px' : '330px'};
         clip-path: ${({ text }) => text === 'Competiciones' ?
             'polygon(7.5% 0%, 100% 0, 92.5% 100%, 0% 100%)' :
             'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)'};
+    }
+
+    @media (min-width: ${breakPoints.desktop}) {
+        width: ${({ text }) => text === 'Competiciones' ? '56vw' : '28vw'};
+        height: 50vh;
     }
 `
 
@@ -45,6 +50,10 @@ const Text = styled.p`
     padding-left: 3em;
     color: ${colors.text};
     font-size: ${fontSizes[300]};
+
+    @media (min-width: ${breakPoints.desktop}) {
+        padding-left: 4.5vw;
+    }
 `
 
 interface ItemProps {
