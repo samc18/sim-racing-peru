@@ -1,21 +1,17 @@
 import styled from 'styled-components'
 import {
     colors,
-    margins,
     breakPoints,
 } from '../styles/stylesVariables'
 
 const StyledSponsors = styled.div`
+    grid-column: 2 / 3;
     padding: 3em 0;
 `
 
 const Title = styled.h1`
     color: ${colors.text};
-    margin-left: ${margins.mobile};
     margin-bottom: 2em;
-    @media (min-width: ${breakPoints.tablet}) {
-        margin-left: ${margins.desktop};
-    }
 `
 
 const Logo = styled.img`
@@ -62,6 +58,7 @@ const Container = styled.div`
         grid-template-areas:
             'autotvperu simula intel legion autoexpress';
         gap: 3em;
+    }
 `
 
 const Sponsors = ({ className }: { className?: string }) => {

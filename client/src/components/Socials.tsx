@@ -5,17 +5,13 @@ import {
     FaYoutubeSquare,
 } from 'react-icons/fa'
 import { BsDiscord } from 'react-icons/bs'
-import { colors, margins, breakPoints } from '../styles/stylesVariables'
+import { colors } from '../styles/stylesVariables'
 
 const StyledSocials = styled.div`
+    grid-column: 2 / 3;
     display: flex;
     gap: 1.5em;
     padding: 3em 0;
-    padding-inline: ${margins.mobile};
-
-    @media (min-width: ${breakPoints.tablet}) {
-        padding-inline: ${margins.desktop};
-    }
 
     .icon {
         color: ${colors.icon};

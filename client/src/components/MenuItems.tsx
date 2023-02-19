@@ -1,13 +1,10 @@
 import styled from 'styled-components'
 import Item from './Item'
-import {
-    margins,
-    breakPoints,
-} from '../styles/stylesVariables'
-
+import { breakPoints } from '../styles/stylesVariables'
 const StyledItem = styled(Item)``
 
 const StyledMenuItems = styled.div`
+    grid-column: 2 / 3;
     padding: 3em 0;
     display: grid;
     justify-items: center;
@@ -41,13 +38,13 @@ const StyledMenuItems = styled.div`
             'herramientas pits';
         gap: 1em 0;
         justify-content: center;
-        padding-inline: ${margins.desktop};
     }
 
     @media (min-width: ${breakPoints.desktop}) {
         grid-template-areas:
             'competiciones competiciones herramientas'
             'pilotos equipos pits';
+    }
 `
 
 const MenuItems = ({ className }: { className?: string }) => {

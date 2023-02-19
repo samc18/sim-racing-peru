@@ -1,22 +1,21 @@
 import styled from 'styled-components'
-import {
-    colors,
-    margins,
-    breakPoints,
-} from '../styles/stylesVariables'
+import { colors } from '../styles/stylesVariables'
 import Slider from './Slider'
 
 const StyledLastEvents = styled.div`
+    grid-column: 2 / 3;
     padding: 3em 0;
+    // Fix for slider going to wide
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    min-height: 0;
+    min-width: 0;
 `
 
 const Title = styled.h1`
     color: ${colors.text};
-    margin-left: ${margins.mobile};
     margin-bottom: 2em;
-    @media (min-width: ${breakPoints.tablet}) {
-        margin-left: ${margins.desktop};
-    }
 `
 
 const LastEvents = ({ className }: { className?: string }) => {
