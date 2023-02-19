@@ -19,6 +19,7 @@ const StyledSwiper = styled(Swiper)`
 const Slider = ({ className }: { className?: string }) => {
     return (
         <StyledSwiper
+            spaceBetween={20}
             slidesPerView={1}
             breakpoints={{
                 1260: {

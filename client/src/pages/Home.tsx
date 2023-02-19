@@ -1,5 +1,8 @@
 import styled from 'styled-components'
-import { colors } from '../styles/stylesVariables'
+import {
+    colors,
+    mediaQueryMargins,
+} from '../styles/stylesVariables'
 import MenuItems from '../components/MenuItems'
 import Socials from '../components/Socials'
 import LastEvents from '../components/LastEvents'
@@ -9,6 +12,7 @@ const StyledHome = styled.div`
     background-image: url(/images/home/background.jpg);
     background-color: ${colors.background};
     background-blend-mode: multiply;
+    ${mediaQueryMargins}
 `
 
 const Home = () => {
