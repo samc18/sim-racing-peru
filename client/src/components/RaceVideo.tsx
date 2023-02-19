@@ -18,6 +18,11 @@ const Iframe = styled.iframe`
         width: 560px;
         height: 315px;
     }
+
+    @media (min-width: ${breakPoints.desktop}) {
+        width: 39vw;
+        height: 55vh;
+    }
 `
 
 interface RaceVideoProps {
